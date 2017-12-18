@@ -167,6 +167,11 @@ public class PtrFrameLayout extends ViewGroup {
         }
         super.onFinishInflate();
     }
+    
+     //RN中addContentView后需要调此方法
+    public void onFinishInflateRN() {
+        onFinishInflate();
+    }
 
     @Override
     protected void onDetachedFromWindow() {
